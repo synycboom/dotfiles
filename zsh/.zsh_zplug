@@ -2,6 +2,7 @@
 source ~/.zplug/init.zsh
 
 zplug "plugins/git", from:oh-my-zsh
+zplug "jeffreytse/zsh-vi-mode"
 zplug "themes/jnrowe", from:oh-my-zsh
 
 if ! zplug check --verbose; then
