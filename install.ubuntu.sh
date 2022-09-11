@@ -19,3 +19,5 @@ LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/re
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit && rm lazygit.tar.gz
 
+# install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
