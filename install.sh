@@ -1,7 +1,4 @@
-#!/usr/bin/env zsh
-
-echo 'Installing antigen...'
-curl -L git.io/antigen > $HOME/antigen.zsh
+#!/usr/bin/env bash
 
 # What OS are we running?
 if command -v apt > /dev/null; then
