@@ -1,0 +1,7 @@
+antigen use oh-my-zsh
+
+antigen bundle git-extras
+
+antigen theme jnrowe
+
+antigen apply
