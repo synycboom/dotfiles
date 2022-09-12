@@ -1,12 +1,10 @@
 #!/usr/bin/env bash
 
 # What OS are we running?
-if command -v apt > /dev/null; then
+if [[ `uname` == "Darwin" ]]; then
+	source $HOME/dotfiles/install.osx.sh
+elif command -v apt > /dev/null; then
 	source $HOME/dotfiles/install.ubuntu.sh
-elif [[ `uname` == "Darwin" ]]; then
-  	echo 'TODO: for osx'
 else
   	echo 'Unknown OS!'
 fi
-
-echo 'Finished'
