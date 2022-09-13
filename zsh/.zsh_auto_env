@@ -1,12 +1,21 @@
 #!/usr/bin/env zsh
 
+
 function change_node_version() {
 	if [[ -f ".nvmrc" ]]; then
 		nvm use
 	fi
 }
 
-chpwd() {
-	change_node_version
+function change_go_version() {
+	if [ -f "go.mod" ]; then
+    local version=(`sed -nr 's/go ([0-9]+\.?[0-9]*)/\1/p' go.mod`)
+    gvm use ${version}
+  fi
 }
+
+autoload -Uz add-zsh-hook # load add-zsh-hook with zsh (-z) and suppress aliases (-U)
+
+add-zsh-hook chpwd change_node_version
+add-zsh-hook chpwd change_go_version
 

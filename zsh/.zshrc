@@ -46,8 +46,6 @@ source ~/.zsh_zplug
 
 zvm_after_init_commands+=(setup_hook)
 
-autoload -Uz add-zsh-hook # load add-zsh-hook with zsh (-z) and suppress aliases (-U)
-
 source ~/.zsh_auto_env
 
 # source personal env, ignored from git
