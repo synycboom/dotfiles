@@ -1,0 +1,12 @@
+#!/usr/bin/env zsh
+
+function change_node_version() {
+	if [[ -f ".nvmrc" ]]; then
+		nvm use
+	fi
+}
+
+chpwd() {
+	change_node_version
+}
+
