@@ -12,7 +12,7 @@ chsh -s $(which zsh)
 curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
 
 # install fonts
-rm -rf /tmp/fonts && git clone https://github.com/powerline/fonts.git --depth=1 /tmp/fonts && /tmp/fonts/install.sh && rm -rf /tmp/fonts
+rm -rf /tmp/fonts && git clone https://github.com/ryanoasis/nerd-fonts --depth=1 /tmp/fonts && /tmp/fonts/install.sh && rm -rf /tmp/fonts
 
 # install lazy-git
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[0-35.]+')
@@ -21,3 +21,8 @@ sudo tar xf lazygit.tar.gz -C /usr/local/bin lazygit && rm lazygit.tar.gz
 
 # install fzf
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+
+# install fd
+sudo apt install fd-find
+ln -s $(which fdfind) ~/.local/bin/fd
+
