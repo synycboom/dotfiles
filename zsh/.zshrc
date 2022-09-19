@@ -15,6 +15,7 @@ export GIT_EDITOR=nvim
 alias lg="lazygit"
 alias vim="nvim"
 alias k=kubectl
+alias ls="ls -G"
 
 export NVM_DIR="$HOME/.nvm"
 
