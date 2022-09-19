@@ -3,6 +3,9 @@
 export IGNOREEOF=3
 set -o ignoreeof
 
+# autocd
+setopt auto_cd
+
 # disable bell sound
 unsetopt BEEP
 
