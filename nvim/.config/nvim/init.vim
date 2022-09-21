@@ -21,6 +21,10 @@ set nohlsearch
 " use system clipboard
 set clipboard=unnamed
 
+" use smart case
+set ignorecase
+set smartcase
+
 " turn hybrid line numbers on
 :set number relativenumber
 :set nu rnu
