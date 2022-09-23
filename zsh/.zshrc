@@ -55,6 +55,7 @@ source ~/.zsh_zplug
 zvm_after_init_commands+=(setup_hook)
 
 source ~/.zsh_auto_env
+source ~/.zsh_tmux
 
 # source personal env, ignored from git
 [[ -f ~/.zsh_private ]] && source ~/.zsh_private

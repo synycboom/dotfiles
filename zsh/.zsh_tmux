@@ -1,0 +1,18 @@
+#!/usr/bin/env zsh
+
+session_name="default_tmux_session"
+
+tmux has-session -t=$session_name 2> /dev/null
+
+# start a new tmux session if not exist
+if [[ $? -ne 0 ]]; then
+	TMUX='' tmux new-session -d -s $session_name
+fi
+
+# attach if outside of tmux, switch if inside tmux
+if [[ -z $TMUX ]]; then
+	tmux attach -t $session_name
+else
+	tmux switch-client -t $session_name
+fi
+
