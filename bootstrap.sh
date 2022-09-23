@@ -11,7 +11,7 @@ echo "listing directories inside dotfiles located at: $HOME/dotfiles"
 pushd $HOME/dotfiles
 
 # list all directories without .git and the dotfiles folder itself.
-for dir in `find . -depth 1 -type d -not -path '*.git*' -not -path .`; do
+for dir in `find . -maxdepth 1 -type d -not -path '*.git*' -not -path .`; do
 	stow $(basename $dir)
 	echo "configured $(basename $dir)"
 done

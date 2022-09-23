@@ -27,6 +27,10 @@ if [[ `uname` == "Darwin" ]]; then
 	export VIRTUALENVWRAPPER_SCRIPT=/opt/homebrew/bin/virtualenvwrapper.sh
 fi
 
+if [[ -d "$HOME/.local/bin" ]]; then
+	export PATH="$HOME/.local/bin:$PATH"
+fi
+
 # all plugins that needs key-binding need to be initialized inside this function after zsh-vi-mode
 function setup_hook() {
 	# key-binding for fzf
