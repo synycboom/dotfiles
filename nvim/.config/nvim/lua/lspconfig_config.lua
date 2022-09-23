@@ -29,7 +29,7 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<space>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<space>f', vim.lsp.buf.formatting, bufopts)
+  vim.keymap.set('n', '<space>fm', vim.lsp.buf.formatting, bufopts)
 end
 
 local lsp_flags = {
@@ -50,6 +50,6 @@ require('lspconfig')['tsserver'].setup{
 require('lspconfig')['gopls'].setup{
     on_attach = on_attach,
     flags = lsp_flags,
-    cmd = { "/Users/wutichai/.gvm/pkgsets/go1.18/global/bin/gopls" }
+    cmd = { "~/.gvm/pkgsets/go1.18/global/bin/gopls" }
 }
 
