@@ -59,3 +59,5 @@ source ~/.zsh_auto_env
 # source personal env, ignored from git
 [[ -f ~/.zsh_private ]] && source ~/.zsh_private
 
+
+[[ -s "/root/.gvm/scripts/gvm" ]] && source "/root/.gvm/scripts/gvm"

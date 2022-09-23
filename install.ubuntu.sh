@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 sudo apt -y install software-properties-common
-sudo add-apt-repository ppa:neovim-ppa/stable
+sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo apt update
 
 sudo apt -y install zsh
-sudo apt -y install g++
+sudo apt -y install g++ bison make
 sudo apt -y install stow
 sudo apt -y install neovim
 
@@ -36,3 +36,6 @@ ln -s $(which fdfind) ~/.local/bin/fd
 
 # install nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+
+# install gvm
+zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
