@@ -78,3 +78,4 @@ autocmd Filetype typescript setlocal ts=2 sw=2 expandtab
 :lua require('bufferline_config')
 :lua require('comment_config')
 :lua require('lualine_config')
+:lua require('spaceduck_config')
