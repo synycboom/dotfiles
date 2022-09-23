@@ -34,3 +34,5 @@ sudo apt install fd-find
 mkdir -p ~/.local/bin
 ln -s $(which fdfind) ~/.local/bin/fd
 
+# install nvm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
