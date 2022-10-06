@@ -3,8 +3,6 @@ call plug#begin()
 " color scheme
 " Plug 'flazz/vim-colorschemes'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
-" buffer line
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 " status line
 Plug 'nvim-lualine/lualine.nvim'
 " fzf search integration
@@ -20,6 +18,8 @@ Plug 'numToStr/Comment.nvim'
 Plug 'nvim-lua/plenary.nvim'
 " icons
 Plug 'kyazdani42/nvim-web-devicons'
+" buffer line
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }
 " syntax highlight
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " search popup
