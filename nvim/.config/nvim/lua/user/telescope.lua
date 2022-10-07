@@ -1,15 +1,20 @@
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
+  return
+end
+
 local opts = { noremap=true, silent=true }
 
-require('telescope').setup{
+telescope.setup {
 	defaults = {
 		file_ignore_patterns = {
 			"node_modules",
-			".git"
+			".git",
 		}
 	}
 }
 
-local original_find_files = require('telescope.builtin').find_files
+local original_find_files = require("telescope.builtin").find_files
 local find_files = function()
 	original_find_files({ hidden = true })
 end

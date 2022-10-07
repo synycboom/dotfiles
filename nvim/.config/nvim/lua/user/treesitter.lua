@@ -1,4 +1,9 @@
-require('nvim-treesitter.configs').setup {
+local status_ok, configs = pcall(require, "nvim-treesitter.configs")
+if not status_ok then
+	return
+end
+
+configs.setup {
   ensure_installed = { "go", "python", "typescript", "javascript" },
   highlight = {
     enable = true,
@@ -10,6 +15,10 @@ require('nvim-treesitter.configs').setup {
   },
   indent = {
     enable = false
+  },
+  context_commentstring = {
+    enable = true,
+    enable_autocmd = false,
   },
 }
 

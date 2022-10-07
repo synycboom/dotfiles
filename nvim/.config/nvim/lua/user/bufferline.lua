@@ -1,7 +1,12 @@
+local status_ok, bufferline = pcall(require, "bufferline")
+if not status_ok then
+  return
+end
+
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
-require("bufferline").setup {
+bufferline.setup {
 	options = {
 		mode = "tabs",
 		show_buffer_close_icons = false,
