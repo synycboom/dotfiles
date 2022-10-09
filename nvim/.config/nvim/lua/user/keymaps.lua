@@ -36,7 +36,6 @@ keymap("n", "Y", "Y", opts)
 
 -- Move text up and down
 keymap("n", "<A-j>", "<Esc>:m .+1<CR>", opts)
-keymap("n", "<leader>j", "<Esc>:m .+1<CR>", opts)
 keymap("n", "<A-k>", "<Esc>:m .-2<CR>", opts)
 
 -- Insert --
