@@ -9,7 +9,7 @@ local lspconfig = require("lspconfig")
 -- For example, node v10.24.1 has to be together with npm install -g typescript-language-server@0.1.14
 local servers = {
   "jsonls",
-  "sumneko_lua",
+  -- "sumneko_lua",
   "gopls",
   "tsserver",
   "pyright",
@@ -18,7 +18,6 @@ local servers = {
 lsp_installer.setup({
 	ensure_installed = servers,
 })
-
 
 for _, server in pairs(servers) do
 	local opts = {
