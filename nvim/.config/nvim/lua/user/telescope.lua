@@ -14,12 +14,7 @@ telescope.setup {
 	}
 }
 
-local original_find_files = require("telescope.builtin").find_files
-local find_files = function()
-	original_find_files({ hidden = true })
-end
-
-vim.keymap.set('n', '<leader>ff', find_files, opts)
+vim.keymap.set('n', '<leader>ff', function() require("telescope.builtin").find_files({ hidden = true }) end, opts)
 vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, opts)
 vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, opts)
 vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, opts)
