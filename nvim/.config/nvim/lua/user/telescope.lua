@@ -3,6 +3,7 @@ if not status_ok then
   return
 end
 
+local actions = require("telescope.actions")
 local opts = { noremap=true, silent=true }
 
 telescope.setup {
@@ -18,6 +19,16 @@ telescope.setup {
         return {"--hidden"}
       end
     },
+    buffers = {
+      mappings = {
+        i = {
+          ["<C-d>"] = actions.delete_buffer,
+        },
+        n = {
+          ["<C-d>"] = actions.delete_buffer,
+        },
+      }
+    }
   },
 }
 

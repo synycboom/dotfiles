@@ -9,7 +9,7 @@ vim.g.loaded_netrwPlugin = 1
 nvim_tree.setup {
   update_focused_file = {
     enable = true,
-    update_cwd = true,
+    update_cwd = false,
   },
   renderer = {
     root_folder_modifier = ":t",
