@@ -8,6 +8,7 @@ sudo apt -y install zsh
 sudo apt -y install g++ bison make
 sudo apt -y install stow
 sudo apt -y install neovim
+sudo apt -y install unzip
 
 # install vim plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -39,3 +40,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 # install gvm
 zsh < <(curl -s -S -L https://raw.githubusercontent.com/moovweb/gvm/master/binscripts/gvm-installer)
+
+# make yank work in WSL https://github.com/microsoft/WSL/issues/4440#issuecomment-638956838
+curl -sLo /tmp/win32yank.zip https://github.com/equalsraf/win32yank/releases/download/v0.0.4/win32yank-x64.zip
+
+unzip -p /tmp/win32yank.zip win32yank.exe > /tmp/win32yank.exe
+
+chmod +x /tmp/win32yank.exe
+
+sudo mv /tmp/win32yank.exe ~/.local/bin/
+
