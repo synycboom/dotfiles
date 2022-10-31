@@ -41,5 +41,8 @@ Plug("nvim-telescope/telescope.nvim", { tag = "0.1.0" })
 -- Treesitter
 Plug("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate"})
 
+-- Navigator
+Plug("christoomey/vim-tmux-navigator") -- vim-tmux navigator
+
 Plug.ends()
 
