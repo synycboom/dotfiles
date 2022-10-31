@@ -43,6 +43,8 @@ Plug("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate"})
 
 -- Navigator
 Plug("christoomey/vim-tmux-navigator") -- vim-tmux navigator
+Plug("tpope/vim-repeat")
+Plug("ggandor/leap.nvim")
 
 -- Comand Preview
 Plug("smjonas/live-command.nvim")

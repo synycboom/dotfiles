@@ -13,5 +13,5 @@ require "user.bufferline"
 require "user.lualine"
 require "user.spaceduck"
 require "user.livecommand"
+require "user.leap"
 
--- TODO: upgrade nvim0.8 with live-preview plugin
