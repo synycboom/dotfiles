@@ -14,4 +14,5 @@ require "user.lualine"
 require "user.spaceduck"
 require "user.livecommand"
 require "user.leap"
+require "user.fold"
 
