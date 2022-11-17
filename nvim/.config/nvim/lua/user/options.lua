@@ -31,8 +31,8 @@ local options = {
   wrap = false,                            -- display lines as one long line
   scrolloff = 8,                           -- vertical scrolling 8 lines ahead
   sidescrolloff = 8,                       -- side scrolling 8 lines ahead
-  foldmethod = "expr",                     -- fold by expression
-  foldexpr = "nvim_treesitter#foldexpr()"  -- use tree-sitter fold expression
+  --[[ foldmethod = "expr",                     -- fold by expression ]]
+  --[[ foldexpr = "nvim_treesitter#foldexpr()"  -- use tree-sitter fold expression ]]
 }
 
 vim.opt.shortmess:append 'c'
