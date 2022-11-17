@@ -49,5 +49,8 @@ Plug("ggandor/leap.nvim")
 -- Comand Preview
 Plug("smjonas/live-command.nvim")
 
+-- Git
+Plug("tpope/vim-fugitive")
+
 Plug.ends()
 
