@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
 sudo apt -y install software-properties-common
-sudo add-apt-repository -y ppa:neovim-ppa/stable
 sudo apt update
 
 sudo apt -y install zsh
 sudo apt -y install g++ bison make
 sudo apt -y install stow
-sudo apt -y install neovim
 sudo apt -y install unzip
+
+# install neovim
+curl -sLo /tmp/nvim-linux64.deb https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb
+sudo apt install /tmp/nvim-linux64.deb
 
 # install vim plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
