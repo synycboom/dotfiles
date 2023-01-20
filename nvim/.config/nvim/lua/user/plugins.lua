@@ -52,5 +52,8 @@ Plug("smjonas/live-command.nvim")
 -- Git
 Plug("tpope/vim-fugitive")
 
+-- Languages Support
+Plug("earthly/earthly.vim", { branch = "main" })
+
 Plug.ends()
 
