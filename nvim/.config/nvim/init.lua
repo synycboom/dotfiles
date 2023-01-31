@@ -15,4 +15,5 @@ require "user.spaceduck"
 require "user.livecommand"
 require "user.leap"
 require "user.fold"
+require "user.gitsigns"
 
