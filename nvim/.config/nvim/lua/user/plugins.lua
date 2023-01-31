@@ -53,6 +53,9 @@ Plug("smjonas/live-command.nvim")
 Plug("tpope/vim-fugitive")
 Plug("lewis6991/gitsigns.nvim")
 
+-- Troubleshooting
+Plug("folke/trouble.nvim")
+
 -- Languages Support
 Plug("earthly/earthly.vim", { branch = "main" })
 
