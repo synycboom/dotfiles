@@ -10,7 +10,8 @@ local lspconfig = require("lspconfig")
 local servers = {
   "jsonls",
   -- "sumneko_lua",
-  "vuels",
+  -- "vuels",
+  "volar",
   "gopls",
   "tsserver",
   "pyright",
