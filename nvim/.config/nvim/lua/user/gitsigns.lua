@@ -53,18 +53,19 @@ gitsigns.setup {
       vim.keymap.set(mode, l, r, opts)
     end
 
-    -- Navigation
-    map('n', ']c', function()
-      if vim.wo.diff then return ']c' end
-      vim.schedule(function() gs.next_hunk() end)
-      return '<Ignore>'
-    end, {expr=true})
-
-    map('n', '[c', function()
-      if vim.wo.diff then return '[c' end
-      vim.schedule(function() gs.prev_hunk() end)
-      return '<Ignore>'
-    end, {expr=true})
+    -- This navigation is disabled due to conflicted with treesitter-textobjects
+    --[[ -- Navigation ]]
+    --[[ map('n', ']c', function() ]]
+    --[[   if vim.wo.diff then return ']c' end ]]
+    --[[   vim.schedule(function() gs.next_hunk() end) ]]
+    --[[   return '<Ignore>' ]]
+    --[[ end, {expr=true}) ]]
+    --[[]]
+    --[[ map('n', '[c', function() ]]
+    --[[   if vim.wo.diff then return '[c' end ]]
+    --[[   vim.schedule(function() gs.prev_hunk() end) ]]
+    --[[   return '<Ignore>' ]]
+    --[[ end, {expr=true}) ]]
 
     -- Actions
     map({'n', 'v'}, '<leader>hs', ':Gitsigns stage_hunk<CR>')
