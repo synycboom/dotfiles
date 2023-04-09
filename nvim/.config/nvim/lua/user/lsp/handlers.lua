@@ -80,7 +80,7 @@ local function lsp_keymaps(bufnr)
   vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, bufopts)
   vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, bufopts)
   vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
-  vim.keymap.set('n', '<leader>fm', vim.lsp.buf.formatting, bufopts)
+  vim.keymap.set('n', '<leader>fm', vim.lsp.buf.format, bufopts)
 end
 
 M.on_attach = function(client, bufnr)
