@@ -88,10 +88,10 @@ configs.setup {
       goto_next_start = {
         ["]a"] = { query = { "@assignment.outer", "@assignment.inner" } },
         ["]b"] = { query = { "@block.outer", "@block.inner" } },
-        ["]l"] = { query = { "@call.outer", "@call.inner" } },
+        ["]l"] = { query = { "@call.outer" } },
         ["]c"] = { query = { "@class.outer", "@class.inner" } },
         ["]i"] = { query = { "@conditional.outer", "@conditional.inner" } },
-        ["]m"] = { query = { "@function.outer", "@function.inner" } },
+        ["]m"] = { query = { "@function.outer" } },
         ["]o"] = { query = { "@loop.outer", "@loop.inner" } },
         ["]n"] = { query = { "@parameter.outer", "@parameter.inner" } },
         ["]r"] = { query = { "@return.outer", "@return.inner" } },

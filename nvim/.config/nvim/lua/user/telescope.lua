@@ -36,4 +36,11 @@ vim.keymap.set('n', '<leader>ff', function() require("telescope.builtin").find_f
 vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, opts)
 vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, opts)
 vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, opts)
+vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics, opts)
+vim.keymap.set('n', '<leader>sb', require('telescope.builtin').lsp_document_symbols, opts)
+vim.keymap.set('n', '<leader>sa', require('telescope.builtin').lsp_dynamic_workspace_symbols, opts)
+vim.keymap.set('n', '<leader>sw', require('telescope.builtin').lsp_workspace_symbols, opts)
+vim.keymap.set('n', 'gr', require('telescope.builtin').lsp_references, opts)
+vim.keymap.set('n', 'gi', require('telescope.builtin').lsp_implementations, opts)
+vim.keymap.set('n', 'gd', require('telescope.builtin').lsp_definitions, opts)
 
