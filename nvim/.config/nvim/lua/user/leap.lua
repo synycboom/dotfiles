@@ -3,4 +3,5 @@ if not status_ok then
 	return
 end
 
+leap.opts.max_phase_one_targets = 0
 leap.add_default_mappings()
