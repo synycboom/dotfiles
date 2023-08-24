@@ -12,12 +12,13 @@ local code_actions = null_ls.builtins.code_actions
 
 null_ls.setup({
 	debug = false,
+	timeout_ms = 5000,
 	sources = {
 		formatting.prettier.with({ extra_args = { "--single-quote", "--jsx-single-quote" } }),
 		formatting.black.with({ extra_args = { "--fast" } }),
 		formatting.stylua,
-    code_actions.gitsigns,
-    -- diagnostics.flake8
+    	code_actions.gitsigns,
+    	-- diagnostics.flake8
 	},
 })
 
