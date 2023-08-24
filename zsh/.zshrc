@@ -19,14 +19,6 @@ alias ls="ls -G"
 
 export NVM_DIR="$HOME/.nvm"
 
-# supports only osx for now
-if [[ `uname` == "Darwin" ]]; then
-	export WORKON_HOME="$HOME/.virtualenvs"
-	export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/bin/python3
-	export VIRTUALENVWRAPPER_VIRTUALENV=/opt/homebrew/bin/virtualenv
-	export VIRTUALENVWRAPPER_SCRIPT=/opt/homebrew/bin/virtualenvwrapper.sh
-fi
-
 if [[ -d "$HOME/.local/bin" ]]; then
 	export PATH="$HOME/.local/bin:$PATH"
 fi
@@ -60,3 +52,4 @@ source ~/.zsh_tmux
 # source personal env, ignored from git
 [[ -f ~/.zsh_private ]] && source ~/.zsh_private
 
+[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
