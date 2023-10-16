@@ -15,6 +15,7 @@ local servers = {
   "gopls",
   "tsserver",
   "pyright",
+  "metals",
 }
 
 lsp_installer.setup({

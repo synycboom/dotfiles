@@ -4,6 +4,9 @@ brew install stow
 brew install zsh
 brew install neovim
 
+# create local bin
+mkdir -p ~/.local/bin
+
 # change default shell
 chsh -s $(which zsh)
 
@@ -33,3 +36,12 @@ brew install python
 
 # install black formatter for python
 pip3 install black
+
+# setup coursier for Scala
+# if calling scala and the command is not found, you should check the ~/.zprofile $PATH
+# in some case coursier setup the path with whitespace incorrectly
+curl -fL https://github.com/VirtusLab/coursier-m1/releases/latest/download/cs-aarch64-apple-darwin.gz | gzip -d > cs
+chmod a+x ./cs
+sudo mv ./cs ~/.local/bin
+cs setup -y
+cs install metals
