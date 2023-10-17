@@ -9,8 +9,8 @@ sudo apt -y install stow
 sudo apt -y install unzip
 
 # install neovim
-curl -sLo /tmp/nvim-linux64.deb https://github.com/neovim/neovim/releases/download/v0.8.0/nvim-linux64.deb
-sudo apt install /tmp/nvim-linux64.deb
+curl -sLo ~/.local/bin/nvim https://github.com/neovim/neovim/releases/download/v0.9.4/nvim.appimage
+chmod a+x ~/.local/bin/nvim
 
 # install vim plug
 curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -52,3 +52,9 @@ chmod +x /tmp/win32yank.exe
 
 sudo mv /tmp/win32yank.exe ~/.local/bin/
 
+# install coursier
+curl -fL "https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz" | gzip -d > cs
+chmod a+x ./cs
+sudo mv ./cs ~/.local/bin
+cs setup -y
+cs install metals
