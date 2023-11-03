@@ -23,9 +23,13 @@ telescope.setup {
       mappings = {
         i = {
           ["<C-d>"] = actions.delete_buffer,
+          ["<C-j>"] = actions.preview_scrolling_down,
+          ["<C-k>"] = actions.preview_scrolling_up,
         },
         n = {
           ["<C-d>"] = actions.delete_buffer,
+          ["<C-j>"] = actions.preview_scrolling_down,
+          ["<C-k>"] = actions.preview_scrolling_up,
         },
       }
     }

@@ -36,7 +36,7 @@ Plug("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 Plug("posva/vim-vue")
 
 -- Telescope
-Plug("nvim-telescope/telescope.nvim", { tag = "0.1.0" })
+Plug("nvim-telescope/telescope.nvim", { tag = "0.1.4" })
 
 -- Treesitter
 Plug("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate"})
