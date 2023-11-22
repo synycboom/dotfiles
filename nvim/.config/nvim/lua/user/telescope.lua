@@ -37,8 +37,8 @@ telescope.setup {
   },
 }
 
-vim.keymap.set('n', '<leader>ff', function() require("telescope.builtin").find_files({ hidden = true, no_ignore = true }) end, opts)
-vim.keymap.set('n', '<leader>fg', require('telescope.builtin').live_grep, opts)
+vim.keymap.set('n', '<leader>fF', function() require("telescope.builtin").find_files({ hidden = true, no_ignore = true }) end, opts)
+vim.keymap.set('n', '<leader>fG', require('telescope.builtin').live_grep, opts)
 vim.keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, opts)
 vim.keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, opts)
 vim.keymap.set('n', '<leader>fd', require('telescope.builtin').diagnostics, opts)
