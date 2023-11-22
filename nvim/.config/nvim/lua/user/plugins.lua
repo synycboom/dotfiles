@@ -37,6 +37,7 @@ Plug("posva/vim-vue")
 
 -- Telescope
 Plug("nvim-telescope/telescope.nvim", { tag = "0.1.4" })
+Plug("princejoogie/dir-telescope.nvim", { tag = "0.2.2" })
 
 -- Treesitter
 Plug("nvim-treesitter/nvim-treesitter", { run = ":TSUpdate"})
