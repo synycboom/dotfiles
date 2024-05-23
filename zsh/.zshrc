@@ -41,13 +41,11 @@ function setup_hook() {
 	# setup virtualenvwrapper
 	[[ $VIRTUALENVWRAPPER_SCRIPT ]] && source $VIRTUALENVWRAPPER_SCRIPT
 
-  # setup jenv
-  source ~/.zsh_jenv
-
   # setup coursier path
   COURSIER_BIN="$HOME/Library/Application Support/Coursier/bin"
   if [[ -d "$COURSIER_BIN" ]]; then
     export PATH="$PATH:$COURSIER_BIN"
+    source ~/.zsh_cs
   fi
 }
 
@@ -60,5 +58,3 @@ source ~/.zsh_tmux
 
 # source personal env, ignored from git
 [[ -f ~/.zsh_private ]] && source ~/.zsh_private
-
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"

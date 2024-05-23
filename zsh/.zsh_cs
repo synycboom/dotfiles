@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+cs java --jvm zulu:8 --setup &> /dev/null

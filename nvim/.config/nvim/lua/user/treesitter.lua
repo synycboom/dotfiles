@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = { "lua", "go", "python", "typescript", "javascript", "vue", "hocon" },
+  ensure_installed = { "lua", "go", "python", "typescript", "javascript", "vue", "hocon", "kotlin", "csv" },
   highlight = {
     enable = true,
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.

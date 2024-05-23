@@ -1,0 +1,55 @@
+set clipboard+=unnamed
+set clipboard+=ideaput
+set virtualedit=onemore
+
+set cmdheight=2
+set conceallevel=0
+set ignorecase=true
+set incsearch=true
+set hlsearch=false
+set pumheight = 10
+set smartcase=true
+set smartindent=true
+set splitbelow=true
+set splitright=true
+set termguicolors=true
+set timeoutlen=1000
+set undofile=true
+set updatetime=300
+set expandtab=true
+set cursorline=true
+set number=true
+set relativenumber=false
+set numberwidth=4
+set signcolumn='yes'
+set wrap=false
+set scrolloff=8
+set sidescrolloff=8
+set commentary
+
+""" Keep visual selection
+vnoremap < <gv
+vnoremap > >gv
+
+""" Navigate methods
+map [[ <Action>(MethodUp)
+map ]] <Action>(MethodDown)
+
+""" Collapse different regions
+map zc <Action>(CollapseRegion)
+map zo <Action>(ExpandRegion)
+map <leader>zc <Action>(CollapseAllRegions)
+map <leader>zo <Action>(ExpandAllRegions)
+
+nmap <leader>fm :action ReformatCode<cr>
+
+nmap \e :e ~/.ideavimrc<CR>
+nmap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+let mapleader=" "
+nnoremap <SPACE> <Nop>
+
+nmap gi :action GotoImplementation<CR>
+nmap gd :action GotoDeclaration<CR>
+nmap gp :action GotoSuperMethod<CR>
+nmap gr :action FindUsages<CR>

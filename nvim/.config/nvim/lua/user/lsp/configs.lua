@@ -16,6 +16,7 @@ local servers = {
   "tsserver",
   "pyright",
   "metals",
+  "kotlin_language_server",
 }
 
 lsp_installer.setup({
