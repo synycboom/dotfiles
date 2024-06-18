@@ -53,3 +53,5 @@ nmap gi :action GotoImplementation<CR>
 nmap gd :action GotoDeclaration<CR>
 nmap gp :action GotoSuperMethod<CR>
 nmap gr :action FindUsages<CR>
+nmap <C-o> :action Back<CR>
+nmap <C-i> :action Forward<CR>
