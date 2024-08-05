@@ -23,6 +23,11 @@ if [[ -d "$HOME/.local/bin" ]]; then
 	export PATH="$HOME/.local/bin:$PATH"
 fi
 
+if [[ -d "$HOME/Library/Android/sdk" ]]; then
+  export ANDROID_HOME="$HOME/Library/Android/sdk"
+  export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools
+fi
+
 # all plugins that needs key-binding need to be initialized inside this function after zsh-vi-mode
 function setup_hook() {
 	# key-binding for fzf
