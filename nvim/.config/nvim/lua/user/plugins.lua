@@ -11,7 +11,7 @@ Plug("nvim-lua/plenary.nvim")
 Plug("kyazdani42/nvim-web-devicons")
 Plug("kyazdani42/nvim-tree.lua")
 Plug("numToStr/Comment.nvim")
-Plug("akinsho/bufferline.nvim", { tag = "v2.*" })
+Plug("akinsho/bufferline.nvim", { tag = "v4.6.1" })
 Plug("pineapplegiant/spaceduck", { branch = "main" })
 Plug("nvim-lualine/lualine.nvim")
 Plug("JoosepAlviste/nvim-ts-context-commentstring")
@@ -29,7 +29,9 @@ Plug("L3MON4D3/LuaSnip") --snippet engine
 Plug("rafamadriz/friendly-snippets") -- a bunch of snippets to use
 
 -- LSP
-Plug("williamboman/nvim-lsp-installer") -- simple to use language server installer
+Plug("williamboman/mason.nvim")
+Plug("williamboman/mason-lspconfig.nvim")
+-- Plug("williamboman/nvim-lsp-installer") -- simple to use language server installer
 Plug("neovim/nvim-lspconfig") -- enable LSP
 Plug("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 

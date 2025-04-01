@@ -16,10 +16,11 @@ configs.setup {
   indent = {
     enable = false
   },
-  context_commentstring = {
-    enable = true,
-    enable_autocmd = false,
-  },
+  enable_autocmd = false,
+  -- context_commentstring = {
+  --   enable = true,
+  --   enable_autocmd = false,
+  -- },
   textobjects = {
     select = {
       enable = true,
