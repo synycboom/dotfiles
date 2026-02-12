@@ -19,6 +19,14 @@ alias ls="ls -G"
 
 export NVM_DIR="$HOME/.nvm"
 
+# Fallback: load version managers early if zsh-vi-mode is not available
+# (e.g., Cursor AI shell, non-interactive scripts, etc.)
+# When zvm IS available, setup_hook will handle this instead (see below).
+if ! type zvm_after_init_commands > /dev/null 2>&1; then
+  [[ -s "$NVM_DIR/nvm.sh" ]] && source "$NVM_DIR/nvm.sh"
+  [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "$HOME/.gvm/scripts/gvm"
+fi
+
 if [[ -d "$HOME/.local/bin" ]]; then
 	export PATH="$HOME/.local/bin:$PATH"
 fi
